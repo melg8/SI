@@ -39,6 +39,10 @@ using kilometre_per_hour_t =
 template <typename _type>
 using speed_of_light_t = velocity_t<_type, std::ratio<299792458, 1>::type>;
 
+namespace constants {
+static constexpr speed_of_light_t<long double> c{1};
+}
+
 namespace detail {
 BUILD_UNIT_FROM_DIVISON(velocity_t, length_t, time_t)
 } // namespace detail

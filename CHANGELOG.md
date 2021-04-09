@@ -3,6 +3,7 @@
 ## 2.1.1
 
 *   Cleaning up obsolete todos and typos
+*   Add namespace `SI::constants` that contains physical constants 
 
 ## 2.1.0
 
