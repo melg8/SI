@@ -96,6 +96,9 @@ struct unit_t {
         "Implicit ratio conversion disabled, convert before assigning");
   }
 
+  explicit constexpr operator _type() const { return value_; }
+  explicit constexpr operator _type &() { return value_; }
+
   /// returns the stored value as raw type
   constexpr _type value() const { return value_; }
 

@@ -674,3 +674,10 @@ TEST_CASE(
   STATIC_REQUIRE(zero_kilo == kilo_value);
   STATIC_REQUIRE(kilo_value.value() == 0);
 }
+
+TEST_CASE("GIVEN a unit WHEN implicitely cast to a primitive type THEN it "
+          "implicitely works") {
+  constexpr unit_t<'X', std::ratio<1>, int64_t> almost_a_kilo{999};
+  constexpr int64_t r = almost_a_kilo;
+  REQUIRE(r == 999);
+}
